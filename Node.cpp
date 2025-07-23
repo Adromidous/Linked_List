@@ -24,3 +24,7 @@ int Node::set_data(int set_data) {
 Node* Node::set_next(Node* next) {
 	this->next = next;
 }	
+
+Node* Node::create_node (int data, Node* next) {
+	return new (std::nothrow) Node(data, next); //THROW NULLPTR INSTEAD OF ERROR
+}

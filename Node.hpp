@@ -8,6 +8,7 @@ class Node {
 
 	public:	
 		Node(int data=0, Node* next=null);
+		Node* create_node(int data=0, Node* next=null);
 		int get_data();
 		Node* get_next();
 		int set_data(int set_data);

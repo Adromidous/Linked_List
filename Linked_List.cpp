@@ -19,4 +19,21 @@ void Linked_List::traverse() {
 }
 
 int Linked_List::insert_node(Node* node) {
+
+	if (node == null) {
+		return 0;
+	}
+
+	Node* curr = this->head;
+
+	while (curr.next) {
+		curr = curr->next;
+	}
+	curr.next = node;
+
+	return 1;
+}
+
+int Linked_List::remove_node(int data) {
+
 }
