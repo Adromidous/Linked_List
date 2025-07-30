@@ -2,7 +2,7 @@
 #define NODE_HPP
 
 class Node {
-	protected:
+	private:
 		int data;
 		Node* next;
 
@@ -11,7 +11,7 @@ class Node {
 		Node* create_node(int data=0, Node* next=null);
 		int get_data();
 		Node* get_next();
-		int set_data(int set_data);
+		void set_data(int set_data);
 		Node* set_next(Node* next=null);
 };
 
