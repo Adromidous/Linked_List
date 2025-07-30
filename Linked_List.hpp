@@ -14,7 +14,7 @@ class Linked_List {
 		int get_size();
 		void traverse();
 		int insert_node(Node* node);
-		int remove_node(int data);
+		void remove_node(int data);
 };
 
 #endif
