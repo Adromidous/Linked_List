@@ -12,6 +12,7 @@ class Linked_List {
 	public :
 		Linked_List();
 		int get_size();
+		int is_empty();
 		void traverse();
 		int insert_node(Node* node);
 		Node* remove_node(int data);
