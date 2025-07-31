@@ -2,17 +2,14 @@
 #define NODE_HPP
 
 class Node {
-	private:
+	public:	
 		int data;
 		Node* next;
-
-	public:	
-		Node(int data=0, Node* next=null);
-		Node* create_node(int data=0, Node* next=null);
+		Node(int data=0, Node* next=nullptr);
 		int get_data();
 		Node* get_next();
 		void set_data(int set_data);
-		Node* set_next(Node* next=null);
+		void set_next(Node* next=nullptr);
 };
 
 #endif

@@ -1,7 +1,9 @@
 #include "Linked_List.hpp"
+#include <iostream>
 
 Linked_List::Linked_List() {
-
+	this->size = 0;
+	this->head = nullptr;
 }
 
 int Linked_List::get_size() {
@@ -15,13 +17,11 @@ void Linked_List::traverse() {
 		curr = curr->next;
 		std::cout << curr->data << ", " << std::endl;
 	}
-
-	return 1;
 }
 
 int Linked_List::insert_node(Node* node) {
 
-	if (node == null) {
+	if (node == nullptr) {
 		return 0;
 	}
 
@@ -30,20 +30,21 @@ int Linked_List::insert_node(Node* node) {
 	while (curr->next) {
 		curr = curr->next;
 	}
-	curr.next = node;
+	curr->next = node;
 
 	return 1;
 }
 
 Node* Linked_List::remove_node(int data) {
 	Node* curr = this->head;
-	Node* ret_node = null;
+	Node* ret_node = nullptr;
 
 	while (curr->next) {
-		if (curr->next.data == data) {
+		if (curr->next->data == data) {
 			ret_node = curr->next;
 			curr->next = curr->next->next;
 		}	
 	}
+
 	return ret_node;	
 }
