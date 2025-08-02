@@ -1,6 +1,5 @@
 #ifndef LINKED_LIST_HPP
 #define LINKED_LIST_HPP
-
 #include "Node.hpp"
 
 class Linked_List {

@@ -1,5 +1,5 @@
-#include "Node.hpp"
 #include <new>	//FOR STD::NOTHROW
+#include "Node.hpp"
 
 Node::Node(int data, Node* next) {
 	this->data = data;

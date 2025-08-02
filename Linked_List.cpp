@@ -1,5 +1,5 @@
-#include "Linked_List.hpp"
 #include <iostream>
+#include "Linked_List.hpp"
 
 Linked_List::Linked_List() {
 	this->size = 0;
@@ -61,12 +61,22 @@ Node* Linked_List::remove_node(int data) {
 	Node* curr = this->head;
 	Node* ret_node = nullptr;
 
-	while (curr->next) {
-		if (curr->next->data == data) {
-			ret_node = curr->next;
-			curr->next = curr->next->next;
-		}	
+	//REMOVE HEAD NODE
+	if (curr->data == data) {
+		ret_node = this->head;
+		this->head = curr->next;
+		--this->size;
+	} else {
+		while (curr->next) {
+			if (curr->next->data == data) {
+				ret_node = curr->next;
+				curr->next = curr->next->next;
+				--this->size;
+				break;
+			}
+		}
 	}
 
-	return ret_node;	
+	return ret_node;
+
 }
